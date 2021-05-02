@@ -6,6 +6,7 @@ import styles from "./styles.module.scss";
 import api from "../../services/api";
 import { useRouter } from "next/router";
 import Cookie from "js-cookie";
+import Head from "next/head";
 
 export default function tasks() {
   const [userTasks, setUserTasks] = useState([]);
@@ -68,6 +69,9 @@ export default function tasks() {
 
   return (
     <div className={styles.background}>
+      <Head>
+        <title>Suas Tarefas</title>
+      </Head>
       <div className={styles.backbutton}>
         <button className={styles.back} type="button" onClick={handleLogout}>
           <FiArrowLeftCircle size={50} color="#ffff" />
@@ -87,11 +91,11 @@ export default function tasks() {
             <FiFilter size={50} color="#5699" alt="Ordenar tarefas" />
           </button>
         </div>
+        <div className={styles.sections}>
+          <p className={styles.columntitle}>Título</p>
+          <p>Descrição</p>
+        </div>
         <ul className={styles.list}>
-          <div className={styles.sections}>
-            <p className={styles.columntitle}>Título</p>
-            <p>Descrição</p>
-          </div>
           {userTasks.map((task) => {
             return (
               <div key={task._id}>
