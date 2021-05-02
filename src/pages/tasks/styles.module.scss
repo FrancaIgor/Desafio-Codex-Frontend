@@ -8,18 +8,36 @@
 
 .container {
   width: 60vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .desc {
-  width: 70%;
+  width: 60%;
   overflow: auto;
+  resize: none;
+  margin-left: 1%;
+  border: none;
 }
 
-.title {
+.columntitle {
+  margin-right: 20%;
+}
+
+.list {
   overflow: auto;
+  height: 100vh;
+}
+
+.apptitle {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  margin-bottom: -10%;
+  font-style: italic;
+  text-shadow: 5px 5px #333;
+  font-weight: bold;
+  font-size: 4.4rem;
+  color: #ffffff;
 }
 
 .backbutton {
@@ -35,32 +53,44 @@
 }
 
 .sections {
-  margin-top: 2%;
   margin-bottom: 2%;
-  margin-left: 13%;
   font-weight: bold;
   display: flex;
-  width: 50%;
+  width: 40%;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   color: #0f1014c4;
 }
 
 .task {
   display: flex;
   flex-direction: row;
+  height: 12rem;
   justify-content: space-between;
   list-style: none;
   background-color: #ffffff;
   border-radius: 8px;
   margin-bottom: 5%;
-  padding: 9%;
+  padding: 5%;
+}
+
+.upbutton {
+  border: none;
+  background: none;
+}
+.title {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.trash {
+  background: none;
+  border: none;
 }
 
 .sidebuttons {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .functions {
@@ -69,11 +99,6 @@
   justify-content: space-between;
   background: none;
   margin-top: 20%;
-}
-
-.upbutton {
-  background: none;
-  border: none;
 }
 
 @media screen and (max-width: 1080px) {
@@ -90,5 +115,16 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+  }
+
+  .apptitle {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    margin-bottom: -10%;
+    font-style: italic;
+    text-shadow: 5px 5px #333;
+    font-weight: bold;
+    font-size: 4rem;
+    color: #ffffff;
   }
 }
